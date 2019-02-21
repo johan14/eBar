@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eBar
@@ -49,15 +42,15 @@ namespace eBar
                     if(Convert.ToInt32(dr["role_id"])== 1){
                         KamarierHome kh = new KamarierHome();
                         kh.Show();
-                        // this.Hide();
-                        this.Dispose();
+                        this.Hide();
+                        
                     }
                     else
                     {
 
                         MenaxherHome mh = new MenaxherHome();
                         mh.Show();
-                       // this.Hide();
+                        this.Hide();
                     }
                 }          
                 }
@@ -71,6 +64,11 @@ namespace eBar
             sqlconn.Close();
             
 
+        }
+
+        private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -32,6 +32,27 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Artikull = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.artListView = new System.Windows.Forms.ListView();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.sasiaMin = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.sasiaMes = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.gjendjaArt = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmimiArt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.thjeshteJo = new System.Windows.Forms.RadioButton();
+            this.thjeshtePo = new System.Windows.Forms.RadioButton();
+            this.katCombo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.shtoArtButton = new System.Windows.Forms.Button();
+            this.emriArt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.Kategori = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -65,27 +86,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Furnizim = new System.Windows.Forms.Panel();
-            this.Artikull = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.artListView = new System.Windows.Forms.ListView();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.sasiaMin = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.sasiaMes = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.gjendjaArt = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cmimiArt = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.thjeshteJo = new System.Windows.Forms.RadioButton();
-            this.thjeshtePo = new System.Windows.Forms.RadioButton();
-            this.katCombo = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.shtoArtButton = new System.Windows.Forms.Button();
-            this.emriArt = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.Kamarier = new System.Windows.Forms.Panel();
             this.HappyHour = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -94,6 +94,9 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Artikull.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.Kategori.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.getKategori.SuspendLayout();
@@ -106,9 +109,6 @@
             this.Furnitore.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.Artikull.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,6 +172,208 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(591, 424);
             this.panel1.TabIndex = 1;
+            // 
+            // Artikull
+            // 
+            this.Artikull.Controls.Add(this.label9);
+            this.Artikull.Controls.Add(this.groupBox8);
+            this.Artikull.Controls.Add(this.groupBox9);
+            this.Artikull.Location = new System.Drawing.Point(0, 0);
+            this.Artikull.Name = "Artikull";
+            this.Artikull.Size = new System.Drawing.Size(591, 424);
+            this.Artikull.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(42, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Artikull";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.artListView);
+            this.groupBox8.Location = new System.Drawing.Point(45, 74);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 277);
+            this.groupBox8.TabIndex = 9;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Artikull";
+            // 
+            // artListView
+            // 
+            this.artListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.artListView.Location = new System.Drawing.Point(3, 16);
+            this.artListView.Name = "artListView";
+            this.artListView.Size = new System.Drawing.Size(194, 258);
+            this.artListView.TabIndex = 0;
+            this.artListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.sasiaMin);
+            this.groupBox9.Controls.Add(this.label16);
+            this.groupBox9.Controls.Add(this.sasiaMes);
+            this.groupBox9.Controls.Add(this.label15);
+            this.groupBox9.Controls.Add(this.gjendjaArt);
+            this.groupBox9.Controls.Add(this.label14);
+            this.groupBox9.Controls.Add(this.cmimiArt);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Controls.Add(this.label12);
+            this.groupBox9.Controls.Add(this.thjeshteJo);
+            this.groupBox9.Controls.Add(this.thjeshtePo);
+            this.groupBox9.Controls.Add(this.katCombo);
+            this.groupBox9.Controls.Add(this.label11);
+            this.groupBox9.Controls.Add(this.shtoArtButton);
+            this.groupBox9.Controls.Add(this.emriArt);
+            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Location = new System.Drawing.Point(346, 74);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(200, 277);
+            this.groupBox9.TabIndex = 8;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Shto Artikull";
+            // 
+            // sasiaMin
+            // 
+            this.sasiaMin.Location = new System.Drawing.Point(78, 219);
+            this.sasiaMin.Name = "sasiaMin";
+            this.sasiaMin.Size = new System.Drawing.Size(100, 20);
+            this.sasiaMin.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 222);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Sasia Min";
+            // 
+            // sasiaMes
+            // 
+            this.sasiaMes.Location = new System.Drawing.Point(78, 189);
+            this.sasiaMes.Name = "sasiaMes";
+            this.sasiaMes.Size = new System.Drawing.Size(100, 20);
+            this.sasiaMes.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 196);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Sasia Mes";
+            // 
+            // gjendjaArt
+            // 
+            this.gjendjaArt.Location = new System.Drawing.Point(78, 163);
+            this.gjendjaArt.Name = "gjendjaArt";
+            this.gjendjaArt.Size = new System.Drawing.Size(100, 20);
+            this.gjendjaArt.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(18, 166);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Gjendja";
+            // 
+            // cmimiArt
+            // 
+            this.cmimiArt.Location = new System.Drawing.Point(78, 136);
+            this.cmimiArt.Name = "cmimiArt";
+            this.cmimiArt.Size = new System.Drawing.Size(100, 20);
+            this.cmimiArt.TabIndex = 9;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 139);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Cmimi";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 107);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "I thjeshte";
+            // 
+            // thjeshteJo
+            // 
+            this.thjeshteJo.AutoSize = true;
+            this.thjeshteJo.Location = new System.Drawing.Point(140, 105);
+            this.thjeshteJo.Name = "thjeshteJo";
+            this.thjeshteJo.Size = new System.Drawing.Size(36, 17);
+            this.thjeshteJo.TabIndex = 6;
+            this.thjeshteJo.Text = "Jo";
+            this.thjeshteJo.UseVisualStyleBackColor = true;
+            this.thjeshteJo.CheckedChanged += new System.EventHandler(this.thjeshteJo_CheckedChanged);
+            // 
+            // thjeshtePo
+            // 
+            this.thjeshtePo.AutoSize = true;
+            this.thjeshtePo.Checked = true;
+            this.thjeshtePo.Location = new System.Drawing.Point(87, 105);
+            this.thjeshtePo.Name = "thjeshtePo";
+            this.thjeshtePo.Size = new System.Drawing.Size(38, 17);
+            this.thjeshtePo.TabIndex = 5;
+            this.thjeshtePo.TabStop = true;
+            this.thjeshtePo.Text = "Po";
+            this.thjeshtePo.UseVisualStyleBackColor = true;
+            // 
+            // katCombo
+            // 
+            this.katCombo.FormattingEnabled = true;
+            this.katCombo.Location = new System.Drawing.Point(77, 70);
+            this.katCombo.Name = "katCombo";
+            this.katCombo.Size = new System.Drawing.Size(99, 21);
+            this.katCombo.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(16, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Kategoria";
+            // 
+            // shtoArtButton
+            // 
+            this.shtoArtButton.Location = new System.Drawing.Point(75, 248);
+            this.shtoArtButton.Name = "shtoArtButton";
+            this.shtoArtButton.Size = new System.Drawing.Size(101, 23);
+            this.shtoArtButton.TabIndex = 2;
+            this.shtoArtButton.Text = "Shto Artikull";
+            this.shtoArtButton.UseVisualStyleBackColor = true;
+            this.shtoArtButton.Click += new System.EventHandler(this.shtoArtButton_Click);
+            // 
+            // emriArt
+            // 
+            this.emriArt.Location = new System.Drawing.Point(76, 38);
+            this.emriArt.Name = "emriArt";
+            this.emriArt.Size = new System.Drawing.Size(100, 20);
+            this.emriArt.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 41);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Emri";
             // 
             // Kategori
             // 
@@ -481,208 +683,6 @@
             this.Furnizim.Size = new System.Drawing.Size(591, 424);
             this.Furnizim.TabIndex = 3;
             // 
-            // Artikull
-            // 
-            this.Artikull.Controls.Add(this.label9);
-            this.Artikull.Controls.Add(this.groupBox8);
-            this.Artikull.Controls.Add(this.groupBox9);
-            this.Artikull.Location = new System.Drawing.Point(0, 0);
-            this.Artikull.Name = "Artikull";
-            this.Artikull.Size = new System.Drawing.Size(591, 424);
-            this.Artikull.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Artikull";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.artListView);
-            this.groupBox8.Location = new System.Drawing.Point(45, 74);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(200, 277);
-            this.groupBox8.TabIndex = 9;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Artikull";
-            // 
-            // artListView
-            // 
-            this.artListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.artListView.Location = new System.Drawing.Point(3, 16);
-            this.artListView.Name = "artListView";
-            this.artListView.Size = new System.Drawing.Size(194, 258);
-            this.artListView.TabIndex = 0;
-            this.artListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.sasiaMin);
-            this.groupBox9.Controls.Add(this.label16);
-            this.groupBox9.Controls.Add(this.sasiaMes);
-            this.groupBox9.Controls.Add(this.label15);
-            this.groupBox9.Controls.Add(this.gjendjaArt);
-            this.groupBox9.Controls.Add(this.label14);
-            this.groupBox9.Controls.Add(this.cmimiArt);
-            this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.label12);
-            this.groupBox9.Controls.Add(this.thjeshteJo);
-            this.groupBox9.Controls.Add(this.thjeshtePo);
-            this.groupBox9.Controls.Add(this.katCombo);
-            this.groupBox9.Controls.Add(this.label11);
-            this.groupBox9.Controls.Add(this.shtoArtButton);
-            this.groupBox9.Controls.Add(this.emriArt);
-            this.groupBox9.Controls.Add(this.label10);
-            this.groupBox9.Location = new System.Drawing.Point(346, 74);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(200, 277);
-            this.groupBox9.TabIndex = 8;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Shto Artikull";
-            // 
-            // sasiaMin
-            // 
-            this.sasiaMin.Location = new System.Drawing.Point(78, 219);
-            this.sasiaMin.Name = "sasiaMin";
-            this.sasiaMin.Size = new System.Drawing.Size(100, 20);
-            this.sasiaMin.TabIndex = 15;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 222);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "Sasia Min";
-            // 
-            // sasiaMes
-            // 
-            this.sasiaMes.Location = new System.Drawing.Point(78, 189);
-            this.sasiaMes.Name = "sasiaMes";
-            this.sasiaMes.Size = new System.Drawing.Size(100, 20);
-            this.sasiaMes.TabIndex = 13;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 196);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Sasia Mes";
-            // 
-            // gjendjaArt
-            // 
-            this.gjendjaArt.Location = new System.Drawing.Point(78, 163);
-            this.gjendjaArt.Name = "gjendjaArt";
-            this.gjendjaArt.Size = new System.Drawing.Size(100, 20);
-            this.gjendjaArt.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 166);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Gjendja";
-            // 
-            // cmimiArt
-            // 
-            this.cmimiArt.Location = new System.Drawing.Point(78, 136);
-            this.cmimiArt.Name = "cmimiArt";
-            this.cmimiArt.Size = new System.Drawing.Size(100, 20);
-            this.cmimiArt.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 139);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Cmimi";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "I thjeshte";
-            // 
-            // thjeshteJo
-            // 
-            this.thjeshteJo.AutoSize = true;
-            this.thjeshteJo.Location = new System.Drawing.Point(140, 105);
-            this.thjeshteJo.Name = "thjeshteJo";
-            this.thjeshteJo.Size = new System.Drawing.Size(36, 17);
-            this.thjeshteJo.TabIndex = 6;
-            this.thjeshteJo.Text = "Jo";
-            this.thjeshteJo.UseVisualStyleBackColor = true;
-            this.thjeshteJo.CheckedChanged += new System.EventHandler(this.thjeshteJo_CheckedChanged);
-            // 
-            // thjeshtePo
-            // 
-            this.thjeshtePo.AutoSize = true;
-            this.thjeshtePo.Checked = true;
-            this.thjeshtePo.Location = new System.Drawing.Point(87, 105);
-            this.thjeshtePo.Name = "thjeshtePo";
-            this.thjeshtePo.Size = new System.Drawing.Size(38, 17);
-            this.thjeshtePo.TabIndex = 5;
-            this.thjeshtePo.TabStop = true;
-            this.thjeshtePo.Text = "Po";
-            this.thjeshtePo.UseVisualStyleBackColor = true;
-            // 
-            // katCombo
-            // 
-            this.katCombo.FormattingEnabled = true;
-            this.katCombo.Location = new System.Drawing.Point(77, 70);
-            this.katCombo.Name = "katCombo";
-            this.katCombo.Size = new System.Drawing.Size(99, 21);
-            this.katCombo.TabIndex = 4;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Kategoria";
-            // 
-            // shtoArtButton
-            // 
-            this.shtoArtButton.Location = new System.Drawing.Point(75, 248);
-            this.shtoArtButton.Name = "shtoArtButton";
-            this.shtoArtButton.Size = new System.Drawing.Size(101, 23);
-            this.shtoArtButton.TabIndex = 2;
-            this.shtoArtButton.Text = "Shto Artikull";
-            this.shtoArtButton.UseVisualStyleBackColor = true;
-            this.shtoArtButton.Click += new System.EventHandler(this.shtoArtButton_Click);
-            // 
-            // emriArt
-            // 
-            this.emriArt.Location = new System.Drawing.Point(76, 38);
-            this.emriArt.Name = "emriArt";
-            this.emriArt.Size = new System.Drawing.Size(100, 20);
-            this.emriArt.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 41);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Emri";
-            // 
             // Kamarier
             // 
             this.Kamarier.Location = new System.Drawing.Point(3, 0);
@@ -736,10 +736,17 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "MenaxherHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenaxherHome";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.Artikull.ResumeLayout(false);
+            this.Artikull.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.Kategori.ResumeLayout(false);
             this.Kategori.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -760,11 +767,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.Artikull.ResumeLayout(false);
-            this.Artikull.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }

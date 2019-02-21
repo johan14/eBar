@@ -84,7 +84,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "KamarierHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KamarierHome";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KamarierHome_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -16,5 +16,11 @@ namespace eBar
         {
             InitializeComponent();
         }
+
+        private void KamarierHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LogIn log = new LogIn();
+            log.Show();
+        }
     }
 }

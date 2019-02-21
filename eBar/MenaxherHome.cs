@@ -24,6 +24,14 @@ namespace eBar
             getArtikullList();
         }
 
+        
+
+        void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LogIn log = new LogIn();
+            log.Show();
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Panel[] pan = { Kategori, Artikull, NjesiMatese, Furnitore, NrTavoline, Furnizim, Kamarier, HappyHour };
@@ -165,5 +173,6 @@ namespace eBar
                 MessageBox.Show("haahahah");
             }
         }
+
     }
 }
