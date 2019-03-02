@@ -10,3 +10,15 @@ C:\Users\Johan\source\repos\eBar\eBar\obj\Debug\eBar.csproj.CoreCompileInputs.ca
 C:\Users\Johan\source\repos\eBar\eBar\obj\Debug\eBar.exe
 C:\Users\Johan\source\repos\eBar\eBar\obj\Debug\eBar.pdb
 C:\Users\Johan\source\repos\eBar\eBar\obj\Debug\eBar.MenaxherHome.resources
+C:\Users\nikol\Desktop\eBar\eBar\bin\Debug\eBar.exe.config
+C:\Users\nikol\Desktop\eBar\eBar\bin\Debug\eBar.exe
+C:\Users\nikol\Desktop\eBar\eBar\bin\Debug\eBar.pdb
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.csprojAssemblyReference.cache
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.KamarierHome.resources
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.MenaxherHome.resources
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.LogIn.resources
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.Properties.Resources.resources
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.csproj.GenerateResource.cache
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.exe
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.pdb

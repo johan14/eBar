@@ -7,13 +7,14 @@ namespace eBar
 {
     public partial class MenaxherHome : Form
     {
-        String connectionStr = @"Data Source = JOHAN-PC\SQLEXPRESS;Initial Catalog = bar_db; Integrated Security = True";
+        String connectionStr = @"Data Source = DESKTOP-OBA4Q9G\SQLEXPRESS;Initial Catalog = bar_db2; Integrated Security = True";
 
         public MenaxherHome()
         {
             InitializeComponent();
             listBox1.SelectedIndex = 0;
             getValues();
+            setPassDots();
         }
 
         private void getValues()
@@ -23,6 +24,14 @@ namespace eBar
             getArtikullList();
             getFurnList();
             getNjesiList();
+            getNjesiID();
+        }
+        private void setPassDots() {
+            passwordField.Text = "";
+            // The password character is an asterisk.  
+            passwordField.PasswordChar = '*';
+            // The control will allow no more than 14 characters.  
+            passwordField.MaxLength = 14;
         }
 
         void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,7 +42,7 @@ namespace eBar
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Panel[] pan = { Kategori, Artikull, NjesiMatese, Furnitore, NrTavoline, Furnizim, Kamarier, HappyHour };
+            Panel[] pan = { Kategori, Artikull, NjesiMatese, Furnitore, NrTavoline, Furnizim, Kamarier, HappyHour,Perdorues};
             pan[listBox1.SelectedIndex].BringToFront();
 
         }
@@ -125,6 +134,24 @@ namespace eBar
             katCombo.ValueMember = "id";
             katCombo.DisplayMember = "name";
             katCombo.DataSource = dt;
+            //Console.WriteLine(katCombo.SelectedValue.ToString());
+            sqlConn.Close();
+
+        }
+        public void getNjesiID()
+        {
+            String getNjesiIDquery = "SELECT id,name FROM Njesi_Shitjeje";
+            SqlConnection sqlConn = new SqlConnection(connectionStr);
+            SqlCommand getNjesiIDcmd = new SqlCommand(getNjesiIDquery, sqlConn);
+
+            sqlConn.Open();
+
+            SqlDataReader dr = getNjesiIDcmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            comboBoxNjesi.ValueMember = "id";
+            comboBoxNjesi.DisplayMember = "name";
+            comboBoxNjesi.DataSource = dt;
             //Console.WriteLine(katCombo.SelectedValue.ToString());
             sqlConn.Close();
 
@@ -297,6 +324,60 @@ namespace eBar
             sqlconn.Close();
         }
 
+        private void ShtoButton_Click(object sender, EventArgs e)
+        {
+            EncryptionHelper encryptionHelper = new EncryptionHelper();
+            String shtoUserquery = "INSERT INTO [User] (name,last_name,role_id,user_name,password) " +
+              "VALUES (@name,@last_name,@role_id,@user_name,@password)";
+            SqlConnection sqlConn = new SqlConnection(connectionStr);
+            SqlCommand shtoUserCmd = new SqlCommand(shtoUserquery, sqlConn);
+            shtoUserCmd.Parameters.AddWithValue("@name", nameTextBox.Text);
+            shtoUserCmd.Parameters.AddWithValue("@last_name", textBoxLastName.Text);
+            shtoUserCmd.Parameters.AddWithValue("@user_name", usernameTextBox.Text);
+            shtoUserCmd.Parameters.AddWithValue("@njesi_id", comboBoxNjesi.SelectedValue.ToString());
+            shtoUserCmd.Parameters.AddWithValue("@role_id", radioButtonKam.Checked == true ? 1 : 2);
+            Console.WriteLine(encryptionHelper.Encrypt(passwordField.Text));
+            shtoUserCmd.Parameters.AddWithValue("@password", encryptionHelper.Encrypt(passwordField.Text));
 
+
+            
+            sqlConn.Open();
+            int i = shtoUserCmd.ExecuteNonQuery();
+            if (i == 1) {
+                MessageBox.Show("Perdoruesi u shtua me sukses!");
+                ShtoUSerNjesi();
+            }
+        
+            sqlConn.Close();
+            ClearPanels(groupBox10);
+            //artListView.Clear();
+       
+        }
+        private void ShtoUSerNjesi() {
+             
+            String getLastUserIdQuery = "SELECT TOP 1 id FROM [User] ORDER BY id DESC";
+            SqlConnection sqlConn = new SqlConnection(connectionStr);
+            sqlConn.Open();
+            SqlCommand getLastUserIDcmd = new SqlCommand(getLastUserIdQuery, sqlConn);
+            Int32 njesiId = Convert.ToInt32(comboBoxNjesi.SelectedValue);
+            Int32 userId = 0;
+            SqlDataReader dt = getLastUserIDcmd.ExecuteReader();
+            while (dt.Read())
+            {
+                userId = Convert.ToInt32(dt["id"]);  
+            }
+            dt.Close();
+          
+
+            String shtoUserNjesiQuery = "INSERT INTO User_njesi (user_id, njesi_id) VALUES (@user_id, @njesi_id)";
+            SqlCommand shtoUserNjesiCommand = new SqlCommand(shtoUserNjesiQuery, sqlConn);
+            shtoUserNjesiCommand.Parameters.AddWithValue("@user_id", userId);
+            shtoUserNjesiCommand.Parameters.AddWithValue("@njesi_id", njesiId);
+          
+            int i = shtoUserNjesiCommand.ExecuteNonQuery();
+            sqlConn.Close();
+
+
+        }
     }
 }
