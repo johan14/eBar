@@ -57,6 +57,7 @@ namespace eBar
             sqlConn.Close();
             katListView.Clear();
             getKategoriList();
+            getKatID();
 
         }
 

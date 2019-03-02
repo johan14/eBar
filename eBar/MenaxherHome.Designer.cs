@@ -32,6 +32,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Kategori = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.shtoKatBut = new System.Windows.Forms.Button();
+            this.shtoKatText = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.getKategori = new System.Windows.Forms.GroupBox();
+            this.katListView = new System.Windows.Forms.ListView();
             this.Artikull = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -70,14 +78,6 @@
             this.shtoNjesiB = new System.Windows.Forms.Button();
             this.shtoNjesiText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Kategori = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.shtoKatBut = new System.Windows.Forms.Button();
-            this.shtoKatText = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.getKategori = new System.Windows.Forms.GroupBox();
-            this.katListView = new System.Windows.Forms.ListView();
             this.NrTavoline = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -95,6 +95,9 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Kategori.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.getKategori.SuspendLayout();
             this.Artikull.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -104,9 +107,6 @@
             this.NjesiMatese.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.Kategori.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.getKategori.SuspendLayout();
             this.NrTavoline.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -161,18 +161,95 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Kamarier);
             this.panel1.Controls.Add(this.Kategori);
             this.panel1.Controls.Add(this.Artikull);
             this.panel1.Controls.Add(this.Furnitore);
             this.panel1.Controls.Add(this.NjesiMatese);
             this.panel1.Controls.Add(this.NrTavoline);
             this.panel1.Controls.Add(this.Furnizim);
-            this.panel1.Controls.Add(this.Kamarier);
             this.panel1.Controls.Add(this.HappyHour);
             this.panel1.Location = new System.Drawing.Point(201, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(591, 424);
             this.panel1.TabIndex = 1;
+            // 
+            // Kategori
+            // 
+            this.Kategori.Controls.Add(this.label5);
+            this.Kategori.Controls.Add(this.groupBox1);
+            this.Kategori.Controls.Add(this.getKategori);
+            this.Kategori.Location = new System.Drawing.Point(0, 0);
+            this.Kategori.Name = "Kategori";
+            this.Kategori.Size = new System.Drawing.Size(588, 424);
+            this.Kategori.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Kategori";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.shtoKatBut);
+            this.groupBox1.Controls.Add(this.shtoKatText);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(357, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 277);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Shto Kategori";
+            // 
+            // shtoKatBut
+            // 
+            this.shtoKatBut.Location = new System.Drawing.Point(77, 160);
+            this.shtoKatBut.Name = "shtoKatBut";
+            this.shtoKatBut.Size = new System.Drawing.Size(101, 23);
+            this.shtoKatBut.TabIndex = 2;
+            this.shtoKatBut.Text = "Shto Kategori";
+            this.shtoKatBut.UseVisualStyleBackColor = true;
+            this.shtoKatBut.Click += new System.EventHandler(this.shtoKatButton_Click);
+            // 
+            // shtoKatText
+            // 
+            this.shtoKatText.Location = new System.Drawing.Point(77, 122);
+            this.shtoKatText.Name = "shtoKatText";
+            this.shtoKatText.Size = new System.Drawing.Size(100, 20);
+            this.shtoKatText.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Emri";
+            // 
+            // getKategori
+            // 
+            this.getKategori.Controls.Add(this.katListView);
+            this.getKategori.Location = new System.Drawing.Point(56, 66);
+            this.getKategori.Name = "getKategori";
+            this.getKategori.Size = new System.Drawing.Size(200, 277);
+            this.getKategori.TabIndex = 4;
+            this.getKategori.TabStop = false;
+            this.getKategori.Text = "Kategorite";
+            // 
+            // katListView
+            // 
+            this.katListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.katListView.Location = new System.Drawing.Point(3, 16);
+            this.katListView.Name = "katListView";
+            this.katListView.Size = new System.Drawing.Size(194, 258);
+            this.katListView.TabIndex = 0;
+            this.katListView.UseCompatibleStateImageBehavior = false;
+            this.katListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.katListView_MouseClick);
             // 
             // Artikull
             // 
@@ -537,83 +614,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Emri";
             // 
-            // Kategori
-            // 
-            this.Kategori.Controls.Add(this.label5);
-            this.Kategori.Controls.Add(this.groupBox1);
-            this.Kategori.Controls.Add(this.getKategori);
-            this.Kategori.Location = new System.Drawing.Point(0, 0);
-            this.Kategori.Name = "Kategori";
-            this.Kategori.Size = new System.Drawing.Size(588, 424);
-            this.Kategori.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Kategori";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.shtoKatBut);
-            this.groupBox1.Controls.Add(this.shtoKatText);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(357, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 277);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Shto Kategori";
-            // 
-            // shtoKatBut
-            // 
-            this.shtoKatBut.Location = new System.Drawing.Point(77, 160);
-            this.shtoKatBut.Name = "shtoKatBut";
-            this.shtoKatBut.Size = new System.Drawing.Size(101, 23);
-            this.shtoKatBut.TabIndex = 2;
-            this.shtoKatBut.Text = "Shto Kategori";
-            this.shtoKatBut.UseVisualStyleBackColor = true;
-            this.shtoKatBut.Click += new System.EventHandler(this.shtoKatButton_Click);
-            // 
-            // shtoKatText
-            // 
-            this.shtoKatText.Location = new System.Drawing.Point(77, 122);
-            this.shtoKatText.Name = "shtoKatText";
-            this.shtoKatText.Size = new System.Drawing.Size(100, 20);
-            this.shtoKatText.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Emri";
-            // 
-            // getKategori
-            // 
-            this.getKategori.Controls.Add(this.katListView);
-            this.getKategori.Location = new System.Drawing.Point(56, 66);
-            this.getKategori.Name = "getKategori";
-            this.getKategori.Size = new System.Drawing.Size(200, 277);
-            this.getKategori.TabIndex = 4;
-            this.getKategori.TabStop = false;
-            this.getKategori.Text = "Kategorite";
-            // 
-            // katListView
-            // 
-            this.katListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.katListView.Location = new System.Drawing.Point(3, 16);
-            this.katListView.Name = "katListView";
-            this.katListView.Size = new System.Drawing.Size(194, 258);
-            this.katListView.TabIndex = 0;
-            this.katListView.UseCompatibleStateImageBehavior = false;
-            this.katListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.katListView_MouseClick);
-            // 
             // NrTavoline
             // 
             this.NrTavoline.Controls.Add(this.label7);
@@ -755,6 +755,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.Kategori.ResumeLayout(false);
+            this.Kategori.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.getKategori.ResumeLayout(false);
             this.Artikull.ResumeLayout(false);
             this.Artikull.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -770,11 +775,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.Kategori.ResumeLayout(false);
-            this.Kategori.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.getKategori.ResumeLayout(false);
             this.NrTavoline.ResumeLayout(false);
             this.NrTavoline.PerformLayout();
             this.groupBox6.ResumeLayout(false);
