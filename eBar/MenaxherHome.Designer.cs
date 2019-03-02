@@ -37,6 +37,10 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.artListView = new System.Windows.Forms.ListView();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.thjeshteJo = new System.Windows.Forms.RadioButton();
+            this.thjeshtePo = new System.Windows.Forms.RadioButton();
             this.sasiaMin = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.sasiaMes = new System.Windows.Forms.TextBox();
@@ -45,14 +49,27 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cmimiArt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.thjeshteJo = new System.Windows.Forms.RadioButton();
-            this.thjeshtePo = new System.Windows.Forms.RadioButton();
             this.katCombo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.shtoArtButton = new System.Windows.Forms.Button();
             this.emriArt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Furnitore = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.furnListView = new System.Windows.Forms.ListView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.shtoFurnB = new System.Windows.Forms.Button();
+            this.shtoFurnText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NjesiMatese = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.njesiListView = new System.Windows.Forms.ListView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.shtoNjesiB = new System.Windows.Forms.Button();
+            this.shtoNjesiText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Kategori = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,22 +86,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.NjesiMatese = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Furnitore = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.Furnizim = new System.Windows.Forms.Panel();
             this.Kamarier = new System.Windows.Forms.Panel();
             this.HappyHour = new System.Windows.Forms.Panel();
@@ -97,18 +98,18 @@
             this.Artikull.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.Furnitore.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.NjesiMatese.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.Kategori.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.getKategori.SuspendLayout();
             this.NrTavoline.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.NjesiMatese.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.Furnitore.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -160,11 +161,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Artikull);
             this.panel1.Controls.Add(this.Kategori);
-            this.panel1.Controls.Add(this.NrTavoline);
-            this.panel1.Controls.Add(this.NjesiMatese);
+            this.panel1.Controls.Add(this.Artikull);
             this.panel1.Controls.Add(this.Furnitore);
+            this.panel1.Controls.Add(this.NjesiMatese);
+            this.panel1.Controls.Add(this.NrTavoline);
             this.panel1.Controls.Add(this.Furnizim);
             this.panel1.Controls.Add(this.Kamarier);
             this.panel1.Controls.Add(this.HappyHour);
@@ -197,7 +198,7 @@
             this.groupBox8.Controls.Add(this.artListView);
             this.groupBox8.Location = new System.Drawing.Point(45, 74);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(200, 277);
+            this.groupBox8.Size = new System.Drawing.Size(200, 321);
             this.groupBox8.TabIndex = 9;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Artikull";
@@ -207,12 +208,16 @@
             this.artListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.artListView.Location = new System.Drawing.Point(3, 16);
             this.artListView.Name = "artListView";
-            this.artListView.Size = new System.Drawing.Size(194, 258);
+            this.artListView.Size = new System.Drawing.Size(194, 302);
             this.artListView.TabIndex = 0;
             this.artListView.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.label17);
+            this.groupBox9.Controls.Add(this.label12);
+            this.groupBox9.Controls.Add(this.thjeshteJo);
+            this.groupBox9.Controls.Add(this.thjeshtePo);
             this.groupBox9.Controls.Add(this.sasiaMin);
             this.groupBox9.Controls.Add(this.label16);
             this.groupBox9.Controls.Add(this.sasiaMes);
@@ -221,9 +226,6 @@
             this.groupBox9.Controls.Add(this.label14);
             this.groupBox9.Controls.Add(this.cmimiArt);
             this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.label12);
-            this.groupBox9.Controls.Add(this.thjeshteJo);
-            this.groupBox9.Controls.Add(this.thjeshtePo);
             this.groupBox9.Controls.Add(this.katCombo);
             this.groupBox9.Controls.Add(this.label11);
             this.groupBox9.Controls.Add(this.shtoArtButton);
@@ -231,14 +233,54 @@
             this.groupBox9.Controls.Add(this.label10);
             this.groupBox9.Location = new System.Drawing.Point(346, 74);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(200, 277);
+            this.groupBox9.Size = new System.Drawing.Size(200, 321);
             this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Shto Artikull";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(19, 234);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "label17";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 205);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "I thjeshte";
+            // 
+            // thjeshteJo
+            // 
+            this.thjeshteJo.AutoSize = true;
+            this.thjeshteJo.Location = new System.Drawing.Point(139, 203);
+            this.thjeshteJo.Name = "thjeshteJo";
+            this.thjeshteJo.Size = new System.Drawing.Size(36, 17);
+            this.thjeshteJo.TabIndex = 17;
+            this.thjeshteJo.Text = "Jo";
+            this.thjeshteJo.UseVisualStyleBackColor = true;
+            // 
+            // thjeshtePo
+            // 
+            this.thjeshtePo.AutoSize = true;
+            this.thjeshtePo.Checked = true;
+            this.thjeshtePo.Location = new System.Drawing.Point(86, 203);
+            this.thjeshtePo.Name = "thjeshtePo";
+            this.thjeshtePo.Size = new System.Drawing.Size(38, 17);
+            this.thjeshtePo.TabIndex = 16;
+            this.thjeshtePo.TabStop = true;
+            this.thjeshtePo.Text = "Po";
+            this.thjeshtePo.UseVisualStyleBackColor = true;
+            // 
             // sasiaMin
             // 
-            this.sasiaMin.Location = new System.Drawing.Point(78, 219);
+            this.sasiaMin.Location = new System.Drawing.Point(78, 174);
             this.sasiaMin.Name = "sasiaMin";
             this.sasiaMin.Size = new System.Drawing.Size(100, 20);
             this.sasiaMin.TabIndex = 15;
@@ -246,7 +288,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 222);
+            this.label16.Location = new System.Drawing.Point(18, 177);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 13);
             this.label16.TabIndex = 14;
@@ -254,7 +296,7 @@
             // 
             // sasiaMes
             // 
-            this.sasiaMes.Location = new System.Drawing.Point(78, 189);
+            this.sasiaMes.Location = new System.Drawing.Point(78, 144);
             this.sasiaMes.Name = "sasiaMes";
             this.sasiaMes.Size = new System.Drawing.Size(100, 20);
             this.sasiaMes.TabIndex = 13;
@@ -262,7 +304,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 196);
+            this.label15.Location = new System.Drawing.Point(17, 151);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 13);
             this.label15.TabIndex = 12;
@@ -270,7 +312,7 @@
             // 
             // gjendjaArt
             // 
-            this.gjendjaArt.Location = new System.Drawing.Point(78, 163);
+            this.gjendjaArt.Location = new System.Drawing.Point(78, 118);
             this.gjendjaArt.Name = "gjendjaArt";
             this.gjendjaArt.Size = new System.Drawing.Size(100, 20);
             this.gjendjaArt.TabIndex = 11;
@@ -278,7 +320,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 166);
+            this.label14.Location = new System.Drawing.Point(17, 125);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
             this.label14.TabIndex = 10;
@@ -286,7 +328,7 @@
             // 
             // cmimiArt
             // 
-            this.cmimiArt.Location = new System.Drawing.Point(78, 136);
+            this.cmimiArt.Location = new System.Drawing.Point(77, 92);
             this.cmimiArt.Name = "cmimiArt";
             this.cmimiArt.Size = new System.Drawing.Size(100, 20);
             this.cmimiArt.TabIndex = 9;
@@ -294,48 +336,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 139);
+            this.label13.Location = new System.Drawing.Point(17, 99);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 13);
             this.label13.TabIndex = 8;
             this.label13.Text = "Cmimi";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "I thjeshte";
-            // 
-            // thjeshteJo
-            // 
-            this.thjeshteJo.AutoSize = true;
-            this.thjeshteJo.Location = new System.Drawing.Point(140, 105);
-            this.thjeshteJo.Name = "thjeshteJo";
-            this.thjeshteJo.Size = new System.Drawing.Size(36, 17);
-            this.thjeshteJo.TabIndex = 6;
-            this.thjeshteJo.Text = "Jo";
-            this.thjeshteJo.UseVisualStyleBackColor = true;
-            this.thjeshteJo.CheckedChanged += new System.EventHandler(this.thjeshteJo_CheckedChanged);
-            // 
-            // thjeshtePo
-            // 
-            this.thjeshtePo.AutoSize = true;
-            this.thjeshtePo.Checked = true;
-            this.thjeshtePo.Location = new System.Drawing.Point(87, 105);
-            this.thjeshtePo.Name = "thjeshtePo";
-            this.thjeshtePo.Size = new System.Drawing.Size(38, 17);
-            this.thjeshtePo.TabIndex = 5;
-            this.thjeshtePo.TabStop = true;
-            this.thjeshtePo.Text = "Po";
-            this.thjeshtePo.UseVisualStyleBackColor = true;
-            // 
             // katCombo
             // 
             this.katCombo.FormattingEnabled = true;
-            this.katCombo.Location = new System.Drawing.Point(77, 70);
+            this.katCombo.Location = new System.Drawing.Point(77, 65);
             this.katCombo.Name = "katCombo";
             this.katCombo.Size = new System.Drawing.Size(99, 21);
             this.katCombo.TabIndex = 4;
@@ -351,7 +361,7 @@
             // 
             // shtoArtButton
             // 
-            this.shtoArtButton.Location = new System.Drawing.Point(75, 248);
+            this.shtoArtButton.Location = new System.Drawing.Point(77, 283);
             this.shtoArtButton.Name = "shtoArtButton";
             this.shtoArtButton.Size = new System.Drawing.Size(101, 23);
             this.shtoArtButton.TabIndex = 2;
@@ -369,11 +379,163 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 41);
+            this.label10.Location = new System.Drawing.Point(16, 45);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "Emri";
+            // 
+            // Furnitore
+            // 
+            this.Furnitore.Controls.Add(this.label4);
+            this.Furnitore.Controls.Add(this.groupBox4);
+            this.Furnitore.Controls.Add(this.groupBox5);
+            this.Furnitore.Location = new System.Drawing.Point(0, 0);
+            this.Furnitore.Name = "Furnitore";
+            this.Furnitore.Size = new System.Drawing.Size(591, 424);
+            this.Furnitore.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Furnitore";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.furnListView);
+            this.groupBox4.Location = new System.Drawing.Point(45, 66);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 277);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Furnitoret";
+            // 
+            // furnListView
+            // 
+            this.furnListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.furnListView.Location = new System.Drawing.Point(3, 16);
+            this.furnListView.Name = "furnListView";
+            this.furnListView.Size = new System.Drawing.Size(194, 258);
+            this.furnListView.TabIndex = 0;
+            this.furnListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.shtoFurnB);
+            this.groupBox5.Controls.Add(this.shtoFurnText);
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Location = new System.Drawing.Point(346, 66);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 277);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Shto Furnitor";
+            // 
+            // shtoFurnB
+            // 
+            this.shtoFurnB.Location = new System.Drawing.Point(77, 160);
+            this.shtoFurnB.Name = "shtoFurnB";
+            this.shtoFurnB.Size = new System.Drawing.Size(101, 23);
+            this.shtoFurnB.TabIndex = 2;
+            this.shtoFurnB.Text = "Shto Furnitor";
+            this.shtoFurnB.UseVisualStyleBackColor = true;
+            this.shtoFurnB.Click += new System.EventHandler(this.shtoFurnB_Click);
+            // 
+            // shtoFurnText
+            // 
+            this.shtoFurnText.Location = new System.Drawing.Point(77, 122);
+            this.shtoFurnText.Name = "shtoFurnText";
+            this.shtoFurnText.Size = new System.Drawing.Size(100, 20);
+            this.shtoFurnText.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Emri";
+            // 
+            // NjesiMatese
+            // 
+            this.NjesiMatese.Controls.Add(this.label6);
+            this.NjesiMatese.Controls.Add(this.groupBox2);
+            this.NjesiMatese.Controls.Add(this.groupBox3);
+            this.NjesiMatese.Location = new System.Drawing.Point(0, 0);
+            this.NjesiMatese.Name = "NjesiMatese";
+            this.NjesiMatese.Size = new System.Drawing.Size(591, 424);
+            this.NjesiMatese.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Njesi Matese";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.njesiListView);
+            this.groupBox2.Location = new System.Drawing.Point(45, 74);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 277);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Njesite Matese";
+            // 
+            // njesiListView
+            // 
+            this.njesiListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.njesiListView.Location = new System.Drawing.Point(3, 16);
+            this.njesiListView.Name = "njesiListView";
+            this.njesiListView.Size = new System.Drawing.Size(194, 258);
+            this.njesiListView.TabIndex = 0;
+            this.njesiListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.shtoNjesiB);
+            this.groupBox3.Controls.Add(this.shtoNjesiText);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Location = new System.Drawing.Point(346, 74);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 277);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Shto Njesi Matese";
+            // 
+            // shtoNjesiB
+            // 
+            this.shtoNjesiB.Location = new System.Drawing.Point(77, 160);
+            this.shtoNjesiB.Name = "shtoNjesiB";
+            this.shtoNjesiB.Size = new System.Drawing.Size(101, 23);
+            this.shtoNjesiB.TabIndex = 2;
+            this.shtoNjesiB.Text = "Shto Njesi Matese";
+            this.shtoNjesiB.UseVisualStyleBackColor = true;
+            this.shtoNjesiB.Click += new System.EventHandler(this.shtoNjesiB_Click_1);
+            // 
+            // shtoNjesiText
+            // 
+            this.shtoNjesiText.Location = new System.Drawing.Point(77, 122);
+            this.shtoNjesiText.Name = "shtoNjesiText";
+            this.shtoNjesiText.Size = new System.Drawing.Size(100, 20);
+            this.shtoNjesiText.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Emri";
             // 
             // Kategori
             // 
@@ -450,6 +612,7 @@
             this.katListView.Size = new System.Drawing.Size(194, 258);
             this.katListView.TabIndex = 0;
             this.katListView.UseCompatibleStateImageBehavior = false;
+            this.katListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.katListView_MouseClick);
             // 
             // NrTavoline
             // 
@@ -526,156 +689,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Emri";
             // 
-            // NjesiMatese
-            // 
-            this.NjesiMatese.Controls.Add(this.label6);
-            this.NjesiMatese.Controls.Add(this.groupBox2);
-            this.NjesiMatese.Controls.Add(this.groupBox3);
-            this.NjesiMatese.Location = new System.Drawing.Point(0, 0);
-            this.NjesiMatese.Name = "NjesiMatese";
-            this.NjesiMatese.Size = new System.Drawing.Size(591, 424);
-            this.NjesiMatese.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Njesi Matese";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Location = new System.Drawing.Point(45, 74);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 277);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Njesite Matese";
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(3, 16);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(194, 258);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(346, 74);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 277);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Shto Njesi Matese";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(77, 160);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Shto Njesi Matese";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(77, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Emri";
-            // 
-            // Furnitore
-            // 
-            this.Furnitore.Controls.Add(this.label4);
-            this.Furnitore.Controls.Add(this.groupBox4);
-            this.Furnitore.Controls.Add(this.groupBox5);
-            this.Furnitore.Location = new System.Drawing.Point(0, 0);
-            this.Furnitore.Name = "Furnitore";
-            this.Furnitore.Size = new System.Drawing.Size(591, 424);
-            this.Furnitore.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Furnitore";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.listView2);
-            this.groupBox4.Location = new System.Drawing.Point(45, 66);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 277);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Furnitoret";
-            // 
-            // listView2
-            // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Location = new System.Drawing.Point(3, 16);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(194, 258);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Location = new System.Drawing.Point(346, 66);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 277);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Shto Furnitor";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(77, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Shto Furnitor";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(77, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Emri";
-            // 
             // Furnizim
             // 
             this.Furnizim.Location = new System.Drawing.Point(0, 0);
@@ -747,6 +760,16 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.Furnitore.ResumeLayout(false);
+            this.Furnitore.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.NjesiMatese.ResumeLayout(false);
+            this.NjesiMatese.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.Kategori.ResumeLayout(false);
             this.Kategori.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -757,16 +780,6 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.NjesiMatese.ResumeLayout(false);
-            this.NjesiMatese.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.Furnitore.ResumeLayout(false);
-            this.Furnitore.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -795,19 +808,19 @@
         private System.Windows.Forms.TextBox shtoKatText;
         private System.Windows.Forms.ListView katListView;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView njesiListView;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button shtoNjesiB;
+        private System.Windows.Forms.TextBox shtoNjesiText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView furnListView;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button shtoFurnB;
+        private System.Windows.Forms.TextBox shtoFurnText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -831,10 +844,11 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox cmimiArt;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox katCombo;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton thjeshteJo;
         private System.Windows.Forms.RadioButton thjeshtePo;
-        private System.Windows.Forms.ComboBox katCombo;
-        private System.Windows.Forms.Label label11;
     }
 }

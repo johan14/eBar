@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eBar
@@ -19,12 +13,17 @@ namespace eBar
         {
             InitializeComponent();
             listBox1.SelectedIndex = 0;
+            getValues();
+        }
+
+        private void getValues()
+        {
             getKategoriList();
             getKatID();
             getArtikullList();
+            getFurnList();
+            getNjesiList();
         }
-
-        
 
         void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -45,7 +44,7 @@ namespace eBar
 
         private void shtoKategori()
         {
-            String shtoKatquery = "INSERT INTO Kategoria (emri) VALUES (@emri)";
+            String shtoKatquery = "INSERT INTO Kategoria (name) VALUES (@emri)";
             SqlConnection sqlConn = new SqlConnection(connectionStr);
             SqlCommand shtoKatCmd = new SqlCommand(shtoKatquery, sqlConn);
             shtoKatCmd.Parameters.AddWithValue("@emri", shtoKatText.Text);
@@ -54,6 +53,7 @@ namespace eBar
             int i = shtoKatCmd.ExecuteNonQuery();
             if (i == 1)
                 MessageBox.Show("Kategoria u shtua me sukses!");
+            shtoKatText.Clear();
             sqlConn.Close();
             katListView.Clear();
             getKategoriList();
@@ -67,7 +67,7 @@ namespace eBar
 
         private void getKategoriList()
         {
-            String shfaqKat = "SELECT emri FROM Kategoria";
+            String shfaqKat = "SELECT name FROM Kategoria";
             SqlConnection sqlconn = new SqlConnection(connectionStr);
             SqlCommand shfaqKatCmd = new SqlCommand(shfaqKat, sqlconn);
             sqlconn.Open();
@@ -75,11 +75,36 @@ namespace eBar
 
             while (dt.Read())
             {
-                var listViewItem = new ListViewItem(Convert.ToString(dt["emri"]));
+                var listViewItem = new ListViewItem(Convert.ToString(dt["name"]));
                 katListView.Items.Add(listViewItem);
             }
             katListView.View = View.List;
             sqlconn.Close();
+        }
+
+        private void editKategori()
+        {
+            ListView.SelectedIndexCollection indices = katListView.SelectedIndices; 
+            if (indices.Count > 0) { Console.WriteLine("Indices selected:" + indices); }
+            String shfaqKat = "SELECT name FROM Kategoria";
+            SqlConnection sqlconn = new SqlConnection(connectionStr);
+            SqlCommand shfaqKatCmd = new SqlCommand(shfaqKat, sqlconn);
+            sqlconn.Open();
+            SqlDataReader dt = shfaqKatCmd.ExecuteReader();
+
+            while (dt.Read())
+            {
+                var listViewItem = new ListViewItem(Convert.ToString(dt["name"]));
+                katListView.Items.Add(listViewItem);
+            }
+            katListView.View = View.List;
+            sqlconn.Close();
+        }
+
+
+        private void katListView_MouseClick(object sender, MouseEventArgs e)
+        {
+             Console.WriteLine(katListView.SelectedItems[0].Text);
         }
 
         /// //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +113,7 @@ namespace eBar
 
         public void getKatID()
         {
-            String getKatIDquery = "SELECT id,emri FROM Kategoria";
+            String getKatIDquery = "SELECT id,name FROM Kategoria";
             SqlConnection sqlConn = new SqlConnection(connectionStr);
             SqlCommand getKatIDcmd = new SqlCommand(getKatIDquery, sqlConn);
 
@@ -98,7 +123,7 @@ namespace eBar
             DataTable dt = new DataTable();
             dt.Load(dr);
             katCombo.ValueMember = "id";
-            katCombo.DisplayMember = "emri";
+            katCombo.DisplayMember = "name";
             katCombo.DataSource = dt;
             //Console.WriteLine(katCombo.SelectedValue.ToString());
             sqlConn.Close();
@@ -112,7 +137,7 @@ namespace eBar
 
         private void shtoArtikull()
         {
-            String shtoArtquery = "INSERT INTO Artikull (art_name,kat_id,is_simple,cmimi,gjendja,sasi_min,sasi_mes) " +
+            String shtoArtquery = "INSERT INTO Artikull (art_name,kat_id,is_simple,price,gjendja,sasi_min,sasi_mes) " +
                 "VALUES (@art_name,@kat_id,@is_simple,@cmimi,@gjendja,@sasi_min,@sasi_mes)";
             SqlConnection sqlConn = new SqlConnection(connectionStr);
             SqlCommand shtoArtCmd = new SqlCommand(shtoArtquery, sqlConn);
@@ -170,9 +195,108 @@ namespace eBar
         {
             if (thjeshteJo.Checked && emriArt.Text!="")
             {
-                MessageBox.Show("haahahah");
+                MessageBox.Show("Message Box!!!!!!!!!");
             }
         }
+
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+        ///                                            Furnitor                                            ///
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void shtoFurnitor()
+        {
+            String shtoFurnquery = "INSERT INTO Furnitor (fur_name) VALUES (@emri)";
+            SqlConnection sqlConn = new SqlConnection(connectionStr);
+            SqlCommand shtoFurnCmd = new SqlCommand(shtoFurnquery, sqlConn);
+            if (shtoFurnText.Text != "")
+            {
+                shtoFurnCmd.Parameters.AddWithValue("@emri", shtoFurnText.Text);
+
+                sqlConn.Open();
+                Console.WriteLine();
+                int i = shtoFurnCmd.ExecuteNonQuery();
+                if (i == 1)
+                    MessageBox.Show("Furnitori u shtua me sukses!");
+                shtoFurnText.Clear();
+                sqlConn.Close();
+                furnListView.Clear();
+                getFurnList();
+            }
+            else
+                MessageBox.Show("Jepni tekst, jo hapesira");
+        }
+
+        private void shtoFurnB_Click(object sender, EventArgs e)
+        {
+            shtoFurnitor();
+        }
+
+        private void getFurnList()
+        {
+            String shfaqFurn = "SELECT fur_name FROM Furnitor";
+            SqlConnection sqlconn = new SqlConnection(connectionStr);
+            SqlCommand shfaqFurnCmd = new SqlCommand(shfaqFurn, sqlconn);
+            sqlconn.Open();
+            SqlDataReader dt = shfaqFurnCmd.ExecuteReader();
+
+            while (dt.Read())
+            {
+                var listViewItem = new ListViewItem(Convert.ToString(dt["fur_name"]));
+                furnListView.Items.Add(listViewItem);
+            }
+            furnListView.View = View.List;
+            sqlconn.Close();
+        }
+
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+        ///                                            Njesi Matese                                        ///
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void shtoNjesi()
+        {
+            String shtoNjesiquery = "INSERT INTO Njesi_matese (measure_name) VALUES (@emri)";
+            SqlConnection sqlConn = new SqlConnection(connectionStr);
+            SqlCommand shtoNjesiCmd = new SqlCommand(shtoNjesiquery, sqlConn);
+            if (shtoNjesiText.Text != "")
+            {
+                shtoNjesiCmd.Parameters.AddWithValue("@emri", shtoNjesiText.Text);
+
+                sqlConn.Open();
+                Console.WriteLine();
+                int i = shtoNjesiCmd.ExecuteNonQuery();
+                if (i == 1)
+                    MessageBox.Show("Njesia Matese u shtua me sukses!");
+                shtoNjesiText.Clear();
+                sqlConn.Close();
+                njesiListView.Clear();
+                getNjesiList();
+            }
+            else
+                MessageBox.Show("Jepni tekst, jo hapesira");
+        }
+
+        private void shtoNjesiB_Click_1(object sender, EventArgs e)
+        {
+            shtoNjesi();
+        }
+
+        private void getNjesiList()
+        {
+            String shfaqNjesi = "SELECT measure_name FROM Njesi_matese";
+            SqlConnection sqlconn = new SqlConnection(connectionStr);
+            SqlCommand shfaqNjesiCmd = new SqlCommand(shfaqNjesi, sqlconn);
+            sqlconn.Open();
+            SqlDataReader dt = shfaqNjesiCmd.ExecuteReader();
+
+            while (dt.Read())
+            {
+                var listViewItem = new ListViewItem(Convert.ToString(dt["measure_name"]));
+                njesiListView.Items.Add(listViewItem);
+            }
+            njesiListView.View = View.List;
+            sqlconn.Close();
+        }
+
 
     }
 }
