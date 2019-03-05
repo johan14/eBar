@@ -7,7 +7,7 @@ namespace eBar
 {
     public partial class MenaxherHome : Form
     {
-        String connectionStr = @"Data Source = JOHAN-PC\SQLEXPRESS;Initial Catalog = bar_db; Integrated Security = True";
+        String connectionStr = @"Data Source = DESKTOP-OBA4Q9G\SQLEXPRESS;Initial Catalog = bar_db; Integrated Security = True";
 
         public MenaxherHome()
         {

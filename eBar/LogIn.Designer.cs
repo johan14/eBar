@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 18);
+            this.label1.Location = new System.Drawing.Point(229, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 48);
+            this.label2.Location = new System.Drawing.Point(238, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 1;
@@ -58,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 136);
+            this.label3.Location = new System.Drawing.Point(158, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 2;
@@ -67,7 +67,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(109, 93);
+            this.label4.Location = new System.Drawing.Point(158, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 3;
@@ -75,21 +75,21 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(192, 93);
+            this.username.Location = new System.Drawing.Point(241, 147);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(100, 20);
             this.username.TabIndex = 6;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(192, 129);
+            this.password.Location = new System.Drawing.Point(241, 183);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 20);
             this.password.TabIndex = 7;
             // 
             // logButton
             // 
-            this.logButton.Location = new System.Drawing.Point(300, 180);
+            this.logButton.Location = new System.Drawing.Point(349, 234);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(75, 23);
             this.logButton.TabIndex = 8;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 226);
+            this.ClientSize = new System.Drawing.Size(568, 377);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
