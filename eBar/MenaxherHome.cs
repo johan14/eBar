@@ -7,7 +7,7 @@ namespace eBar
 {
     public partial class MenaxherHome : Form
     {
-        String connectionStr = @"Data Source = DESKTOP-OBA4Q9G\SQLEXPRESS;Initial Catalog = bar_db2; Integrated Security = True";
+        String connectionStr = @"Data Source = JOHAN-PC\SQLEXPRESS;Initial Catalog = bar_db; Integrated Security = True";
 
         public MenaxherHome()
         {
@@ -25,6 +25,8 @@ namespace eBar
             getFurnList();
             getNjesiList();
             getNjesiID();
+            getPerdoruesList();
+            data.Text =DateTime.Now.ToString("yyyy-MM-dd");
         }
         private void setPassDots() {
             passwordField.Text = "";
@@ -325,6 +327,9 @@ namespace eBar
             sqlconn.Close();
         }
 
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+        ///                                            Shto Perdorues                                      ///
+        /// /////////////////////////////////////////////////////////////////////////////////////////////////
         private void ShtoButton_Click(object sender, EventArgs e)
         {
             EncryptionHelper encryptionHelper = new EncryptionHelper();
@@ -340,8 +345,6 @@ namespace eBar
             Console.WriteLine(encryptionHelper.Encrypt(passwordField.Text));
             shtoUserCmd.Parameters.AddWithValue("@password", encryptionHelper.Encrypt(passwordField.Text));
 
-
-            
             sqlConn.Open();
             int i = shtoUserCmd.ExecuteNonQuery();
             if (i == 1) {
@@ -351,9 +354,12 @@ namespace eBar
         
             sqlConn.Close();
             ClearPanels(groupBox10);
-            //artListView.Clear();
-       
+            perdoruesListView.Items.Clear();
+            getPerdoruesList();
+            
+
         }
+
         private void ShtoUSerNjesi() {
              
             String getLastUserIdQuery = "SELECT TOP 1 id FROM [User] ORDER BY id DESC";
@@ -368,7 +374,6 @@ namespace eBar
                 userId = Convert.ToInt32(dt["id"]);  
             }
             dt.Close();
-          
 
             String shtoUserNjesiQuery = "INSERT INTO User_njesi (user_id, njesi_id) VALUES (@user_id, @njesi_id)";
             SqlCommand shtoUserNjesiCommand = new SqlCommand(shtoUserNjesiQuery, sqlConn);
@@ -377,7 +382,37 @@ namespace eBar
           
             int i = shtoUserNjesiCommand.ExecuteNonQuery();
             sqlConn.Close();
+            
+        }
 
+        private void getPerdoruesList()
+        {
+            String shfaqUser = "SELECT name,last_name FROM [User]";
+            SqlConnection sqlconn = new SqlConnection(connectionStr);
+            SqlCommand shfaqUserCmd = new SqlCommand(shfaqUser, sqlconn);
+            sqlconn.Open();
+            SqlDataReader dt = shfaqUserCmd.ExecuteReader();
+
+            while (dt.Read())
+            {
+                string[] arr = new string[2];
+                ListViewItem itm;
+                arr[0] = dt.GetString(0);
+                arr[1] = dt.GetString(1);
+                itm = new ListViewItem(arr);
+                perdoruesListView.Items.Add(itm);
+            }
+            
+            sqlconn.Close();
+        }
+
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////
+        ///                                            Shto Furnizim                                      ///
+        /// /////////////////////////////////////////////////////////////////////////////////////////////////
+        /// 
+
+        public void shtoFurnizim()
+        {
 
         }
     }

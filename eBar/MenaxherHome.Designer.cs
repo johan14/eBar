@@ -32,8 +32,21 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Furnitore = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.furnListView = new System.Windows.Forms.ListView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.shtoFurnB = new System.Windows.Forms.Button();
+            this.shtoFurnText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Perdorues = new System.Windows.Forms.Panel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.ShtoButton = new System.Windows.Forms.Button();
+            this.comboBoxNjesi = new System.Windows.Forms.ComboBox();
+            this.labelNjesiShitje = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.userNameLabel = new System.Windows.Forms.Label();
             this.passwordField = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.radioButtonMen = new System.Windows.Forms.RadioButton();
@@ -74,14 +87,6 @@
             this.shtoArtButton = new System.Windows.Forms.Button();
             this.emriArt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Furnitore = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.furnListView = new System.Windows.Forms.ListView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.shtoFurnB = new System.Windows.Forms.Button();
-            this.shtoFurnText = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.NjesiMatese = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -99,36 +104,62 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Furnizim = new System.Windows.Forms.Panel();
-            this.Kamarier = new System.Windows.Forms.Panel();
             this.HappyHour = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.userNameLabel = new System.Windows.Forms.Label();
-            this.labelNjesiShitje = new System.Windows.Forms.Label();
-            this.comboBoxNjesi = new System.Windows.Forms.ComboBox();
-            this.ShtoButton = new System.Windows.Forms.Button();
+            this.Kamarier = new System.Windows.Forms.Panel();
+            this.perdoruesListView = new System.Windows.Forms.ListView();
+            this.emriCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mbiemriCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.nrFature = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.data = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.artikullCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sasiCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmimCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.njesiCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.totalCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Furnitore.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.Perdorues.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.perdoruesGroupBox.SuspendLayout();
             this.Kategori.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.getKategori.SuspendLayout();
             this.Artikull.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.Furnitore.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.NjesiMatese.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.NrTavoline.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.Furnizim.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -181,18 +212,94 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Furnizim);
             this.panel1.Controls.Add(this.Perdorues);
+            this.panel1.Controls.Add(this.Furnitore);
             this.panel1.Controls.Add(this.Kategori);
             this.panel1.Controls.Add(this.Artikull);
-            this.panel1.Controls.Add(this.Furnitore);
             this.panel1.Controls.Add(this.NjesiMatese);
             this.panel1.Controls.Add(this.NrTavoline);
-            this.panel1.Controls.Add(this.Furnizim);
             this.panel1.Controls.Add(this.HappyHour);
             this.panel1.Location = new System.Drawing.Point(201, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(591, 424);
             this.panel1.TabIndex = 1;
+            // 
+            // Furnitore
+            // 
+            this.Furnitore.Controls.Add(this.label4);
+            this.Furnitore.Controls.Add(this.groupBox4);
+            this.Furnitore.Controls.Add(this.groupBox5);
+            this.Furnitore.Location = new System.Drawing.Point(0, 0);
+            this.Furnitore.Name = "Furnitore";
+            this.Furnitore.Size = new System.Drawing.Size(591, 424);
+            this.Furnitore.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Furnitore";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.furnListView);
+            this.groupBox4.Location = new System.Drawing.Point(45, 66);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 277);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Furnitoret";
+            // 
+            // furnListView
+            // 
+            this.furnListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.furnListView.Location = new System.Drawing.Point(3, 16);
+            this.furnListView.Name = "furnListView";
+            this.furnListView.Size = new System.Drawing.Size(194, 258);
+            this.furnListView.TabIndex = 0;
+            this.furnListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.shtoFurnB);
+            this.groupBox5.Controls.Add(this.shtoFurnText);
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Location = new System.Drawing.Point(346, 66);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 277);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Shto Furnitor";
+            // 
+            // shtoFurnB
+            // 
+            this.shtoFurnB.Location = new System.Drawing.Point(77, 160);
+            this.shtoFurnB.Name = "shtoFurnB";
+            this.shtoFurnB.Size = new System.Drawing.Size(101, 23);
+            this.shtoFurnB.TabIndex = 2;
+            this.shtoFurnB.Text = "Shto Furnitor";
+            this.shtoFurnB.UseVisualStyleBackColor = true;
+            this.shtoFurnB.Click += new System.EventHandler(this.shtoFurnB_Click);
+            // 
+            // shtoFurnText
+            // 
+            this.shtoFurnText.Location = new System.Drawing.Point(77, 122);
+            this.shtoFurnText.Name = "shtoFurnText";
+            this.shtoFurnText.Size = new System.Drawing.Size(100, 20);
+            this.shtoFurnText.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Emri";
             // 
             // Perdorues
             // 
@@ -226,6 +333,49 @@
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Shto perdorues";
+            // 
+            // ShtoButton
+            // 
+            this.ShtoButton.Location = new System.Drawing.Point(82, 245);
+            this.ShtoButton.Name = "ShtoButton";
+            this.ShtoButton.Size = new System.Drawing.Size(104, 23);
+            this.ShtoButton.TabIndex = 14;
+            this.ShtoButton.Text = "Shto Perdorues";
+            this.ShtoButton.UseVisualStyleBackColor = true;
+            this.ShtoButton.Click += new System.EventHandler(this.ShtoButton_Click);
+            // 
+            // comboBoxNjesi
+            // 
+            this.comboBoxNjesi.FormattingEnabled = true;
+            this.comboBoxNjesi.Location = new System.Drawing.Point(82, 194);
+            this.comboBoxNjesi.Name = "comboBoxNjesi";
+            this.comboBoxNjesi.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxNjesi.TabIndex = 13;
+            // 
+            // labelNjesiShitje
+            // 
+            this.labelNjesiShitje.AutoSize = true;
+            this.labelNjesiShitje.Location = new System.Drawing.Point(12, 197);
+            this.labelNjesiShitje.Name = "labelNjesiShitje";
+            this.labelNjesiShitje.Size = new System.Drawing.Size(57, 13);
+            this.labelNjesiShitje.TabIndex = 12;
+            this.labelNjesiShitje.Text = "Njesi shitje";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(83, 118);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usernameTextBox.TabIndex = 11;
+            // 
+            // userNameLabel
+            // 
+            this.userNameLabel.AutoSize = true;
+            this.userNameLabel.Location = new System.Drawing.Point(12, 124);
+            this.userNameLabel.Name = "userNameLabel";
+            this.userNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.userNameLabel.TabIndex = 10;
+            this.userNameLabel.Text = "Username";
             // 
             // passwordField
             // 
@@ -309,6 +459,7 @@
             // 
             // perdoruesGroupBox
             // 
+            this.perdoruesGroupBox.Controls.Add(this.perdoruesListView);
             this.perdoruesGroupBox.Location = new System.Drawing.Point(23, 50);
             this.perdoruesGroupBox.Name = "perdoruesGroupBox";
             this.perdoruesGroupBox.Size = new System.Drawing.Size(200, 339);
@@ -604,82 +755,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Emri";
             // 
-            // Furnitore
-            // 
-            this.Furnitore.Controls.Add(this.label4);
-            this.Furnitore.Controls.Add(this.groupBox4);
-            this.Furnitore.Controls.Add(this.groupBox5);
-            this.Furnitore.Location = new System.Drawing.Point(0, 0);
-            this.Furnitore.Name = "Furnitore";
-            this.Furnitore.Size = new System.Drawing.Size(591, 424);
-            this.Furnitore.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Furnitore";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.furnListView);
-            this.groupBox4.Location = new System.Drawing.Point(45, 66);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 277);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Furnitoret";
-            // 
-            // furnListView
-            // 
-            this.furnListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.furnListView.Location = new System.Drawing.Point(3, 16);
-            this.furnListView.Name = "furnListView";
-            this.furnListView.Size = new System.Drawing.Size(194, 258);
-            this.furnListView.TabIndex = 0;
-            this.furnListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.shtoFurnB);
-            this.groupBox5.Controls.Add(this.shtoFurnText);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Location = new System.Drawing.Point(346, 66);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 277);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Shto Furnitor";
-            // 
-            // shtoFurnB
-            // 
-            this.shtoFurnB.Location = new System.Drawing.Point(77, 160);
-            this.shtoFurnB.Name = "shtoFurnB";
-            this.shtoFurnB.Size = new System.Drawing.Size(101, 23);
-            this.shtoFurnB.TabIndex = 2;
-            this.shtoFurnB.Text = "Shto Furnitor";
-            this.shtoFurnB.UseVisualStyleBackColor = true;
-            this.shtoFurnB.Click += new System.EventHandler(this.shtoFurnB_Click);
-            // 
-            // shtoFurnText
-            // 
-            this.shtoFurnText.Location = new System.Drawing.Point(77, 122);
-            this.shtoFurnText.Name = "shtoFurnText";
-            this.shtoFurnText.Size = new System.Drawing.Size(100, 20);
-            this.shtoFurnText.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Emri";
-            // 
             // NjesiMatese
             // 
             this.NjesiMatese.Controls.Add(this.label6);
@@ -833,17 +908,31 @@
             // 
             // Furnizim
             // 
+            this.Furnizim.Controls.Add(this.textBox1);
+            this.Furnizim.Controls.Add(this.button2);
+            this.Furnizim.Controls.Add(this.textBox4);
+            this.Furnizim.Controls.Add(this.label29);
+            this.Furnizim.Controls.Add(this.listView1);
+            this.Furnizim.Controls.Add(this.label28);
+            this.Furnizim.Controls.Add(this.button1);
+            this.Furnizim.Controls.Add(this.comboBox5);
+            this.Furnizim.Controls.Add(this.label27);
+            this.Furnizim.Controls.Add(this.label26);
+            this.Furnizim.Controls.Add(this.comboBox3);
+            this.Furnizim.Controls.Add(this.label25);
+            this.Furnizim.Controls.Add(this.comboBox2);
+            this.Furnizim.Controls.Add(this.label23);
+            this.Furnizim.Controls.Add(this.data);
+            this.Furnizim.Controls.Add(this.label24);
+            this.Furnizim.Controls.Add(this.comboBox1);
+            this.Furnizim.Controls.Add(this.label22);
+            this.Furnizim.Controls.Add(this.nrFature);
+            this.Furnizim.Controls.Add(this.label21);
+            this.Furnizim.Controls.Add(this.label20);
             this.Furnizim.Location = new System.Drawing.Point(0, 0);
             this.Furnizim.Name = "Furnizim";
             this.Furnizim.Size = new System.Drawing.Size(591, 424);
             this.Furnizim.TabIndex = 3;
-            // 
-            // Kamarier
-            // 
-            this.Kamarier.Location = new System.Drawing.Point(3, 0);
-            this.Kamarier.Name = "Kamarier";
-            this.Kamarier.Size = new System.Drawing.Size(591, 424);
-            this.Kamarier.TabIndex = 2;
             // 
             // HappyHour
             // 
@@ -884,48 +973,241 @@
             this.tabPage4.Text = "Anulime";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // usernameTextBox
+            // Kamarier
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(83, 118);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.usernameTextBox.TabIndex = 11;
+            this.Kamarier.Location = new System.Drawing.Point(3, 0);
+            this.Kamarier.Name = "Kamarier";
+            this.Kamarier.Size = new System.Drawing.Size(591, 424);
+            this.Kamarier.TabIndex = 2;
             // 
-            // userNameLabel
+            // perdoruesListView
             // 
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(12, 124);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(55, 13);
-            this.userNameLabel.TabIndex = 10;
-            this.userNameLabel.Text = "Username";
+            this.perdoruesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.emriCol,
+            this.mbiemriCol});
+            this.perdoruesListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.perdoruesListView.Location = new System.Drawing.Point(3, 16);
+            this.perdoruesListView.Name = "perdoruesListView";
+            this.perdoruesListView.Size = new System.Drawing.Size(194, 320);
+            this.perdoruesListView.TabIndex = 0;
+            this.perdoruesListView.UseCompatibleStateImageBehavior = false;
+            this.perdoruesListView.View = System.Windows.Forms.View.Details;
             // 
-            // labelNjesiShitje
+            // emriCol
             // 
-            this.labelNjesiShitje.AutoSize = true;
-            this.labelNjesiShitje.Location = new System.Drawing.Point(12, 197);
-            this.labelNjesiShitje.Name = "labelNjesiShitje";
-            this.labelNjesiShitje.Size = new System.Drawing.Size(57, 13);
-            this.labelNjesiShitje.TabIndex = 12;
-            this.labelNjesiShitje.Text = "Njesi shitje";
+            this.emriCol.Text = "Emri";
+            this.emriCol.Width = 89;
             // 
-            // comboBoxNjesi
+            // mbiemriCol
             // 
-            this.comboBoxNjesi.FormattingEnabled = true;
-            this.comboBoxNjesi.Location = new System.Drawing.Point(82, 194);
-            this.comboBoxNjesi.Name = "comboBoxNjesi";
-            this.comboBoxNjesi.Size = new System.Drawing.Size(101, 21);
-            this.comboBoxNjesi.TabIndex = 13;
+            this.mbiemriCol.Text = "Mbiemri";
+            this.mbiemriCol.Width = 99;
             // 
-            // ShtoButton
+            // label20
             // 
-            this.ShtoButton.Location = new System.Drawing.Point(82, 245);
-            this.ShtoButton.Name = "ShtoButton";
-            this.ShtoButton.Size = new System.Drawing.Size(104, 23);
-            this.ShtoButton.TabIndex = 14;
-            this.ShtoButton.Text = "Shto Perdorues";
-            this.ShtoButton.UseVisualStyleBackColor = true;
-            this.ShtoButton.Click += new System.EventHandler(this.ShtoButton_Click);
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(42, 19);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Fature Furnizimi";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(205, 19);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(24, 13);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Nr: ";
+            // 
+            // nrFature
+            // 
+            this.nrFature.Location = new System.Drawing.Point(235, 12);
+            this.nrFature.Name = "nrFature";
+            this.nrFature.ReadOnly = true;
+            this.nrFature.Size = new System.Drawing.Size(100, 20);
+            this.nrFature.TabIndex = 2;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(42, 80);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(74, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Zgjidh Furnitor";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(129, 77);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // data
+            // 
+            this.data.Location = new System.Drawing.Point(444, 12);
+            this.data.Name = "data";
+            this.data.ReadOnly = true;
+            this.data.Size = new System.Drawing.Size(100, 20);
+            this.data.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(402, 19);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(36, 13);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Data: ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(129, 108);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(45, 111);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(38, 13);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Artikull";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(129, 139);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 11;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(45, 142);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(33, 13);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Sasia";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(45, 174);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 13);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "Cmimi";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(129, 203);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.TabIndex = 15;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(45, 206);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 13);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Njesia";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(175, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Shto";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label28.Location = new System.Drawing.Point(277, 53);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 15);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "Fatura:";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.artikullCol,
+            this.sasiCol,
+            this.cmimCol,
+            this.njesiCol,
+            this.totalCol});
+            this.listView1.Location = new System.Drawing.Point(277, 78);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(304, 166);
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // artikullCol
+            // 
+            this.artikullCol.Text = "Artikull";
+            // 
+            // sasiCol
+            // 
+            this.sasiCol.Text = "Sasia";
+            // 
+            // cmimCol
+            // 
+            this.cmimCol.Text = "Cmimi";
+            // 
+            // njesiCol
+            // 
+            this.njesiCol.Text = "Njesia";
+            // 
+            // totalCol
+            // 
+            this.totalCol.Text = "Totali";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(449, 253);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(33, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Totali";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(488, 250);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(93, 20);
+            this.textBox4.TabIndex = 20;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(452, 279);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(129, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Shto Furnizim";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(129, 173);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 22;
             // 
             // MenaxherHome
             // 
@@ -940,9 +1222,15 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.Furnitore.ResumeLayout(false);
+            this.Furnitore.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.Perdorues.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.perdoruesGroupBox.ResumeLayout(false);
             this.Kategori.ResumeLayout(false);
             this.Kategori.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -953,11 +1241,6 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.Furnitore.ResumeLayout(false);
-            this.Furnitore.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.NjesiMatese.ResumeLayout(false);
             this.NjesiMatese.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -968,6 +1251,8 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.Furnizim.ResumeLayout(false);
+            this.Furnizim.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1055,5 +1340,34 @@
         private System.Windows.Forms.Label labelNjesiShitje;
         private System.Windows.Forms.ComboBox comboBoxNjesi;
         private System.Windows.Forms.Button ShtoButton;
+        private System.Windows.Forms.ListView perdoruesListView;
+        private System.Windows.Forms.ColumnHeader emriCol;
+        private System.Windows.Forms.ColumnHeader mbiemriCol;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader artikullCol;
+        private System.Windows.Forms.ColumnHeader sasiCol;
+        private System.Windows.Forms.ColumnHeader cmimCol;
+        private System.Windows.Forms.ColumnHeader njesiCol;
+        private System.Windows.Forms.ColumnHeader totalCol;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox data;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox nrFature;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

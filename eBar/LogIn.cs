@@ -21,17 +21,16 @@ namespace eBar
         private void logButton_Click(object sender, EventArgs e)
         {
             EncryptionHelper encryptionHelper = new EncryptionHelper();
-            String connectionStr = @"Data Source = DESKTOP-OBA4Q9G\SQLEXPRESS;Initial Catalog = bar_db2; Integrated Security = True";
+            String connectionStr = @"Data Source = JOHAN-PC\SQLEXPRESS;Initial Catalog = bar_db; Integrated Security = True";
             SqlConnection sqlconn = new SqlConnection(connectionStr);
             SqlCommand getNumberRows = new SqlCommand("SELECT COUNT(*) as cnt FROM [User] WHERE user_name = @username AND password = @password ",sqlconn);
             SqlCommand getRolID = new SqlCommand("SELECT role_id FROM [user] WHERE user_name = @username AND password = @password ",sqlconn);
             getNumberRows.Parameters.Clear();
             getNumberRows.Parameters.AddWithValue("@username", username.Text);
-           // getNumberRows.Parameters.AddWithValue("@password", encryptionHelper.Decrypt(password.Text));
-            getNumberRows.Parameters.AddWithValue("@password",password.Text);
+            getNumberRows.Parameters.AddWithValue("@password", encryptionHelper.Encrypt(password.Text));
             getRolID.Parameters.Clear();
             getRolID.Parameters.AddWithValue("@username", username.Text);
-            getRolID.Parameters.AddWithValue("@password", password.Text);
+            getRolID.Parameters.AddWithValue("@password", encryptionHelper.Encrypt(password.Text));
 
             
             sqlconn.Open();
