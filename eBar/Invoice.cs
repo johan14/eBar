@@ -25,7 +25,7 @@ namespace eBar
             InitializeComponent();
             // this.artCombo.SelectedIndexChanged += this.artCombo_SelectedIndexChanged;
             tableId = Convert.ToInt32(id);
-
+            data.Text = DateTime.Now.ToString("yyyy-MM-dd H:m:s");
             GetUserData();
             labelTable.Text = id;
             loggedInUserId = UserInformation.CurrentLoggedInUser;

@@ -22,3 +22,4 @@ C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.csproj.GenerateResource.cache
 C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.csproj.CoreCompileInputs.cache
 C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.exe
 C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.pdb
+C:\Users\nikol\Desktop\eBar\eBar\obj\Debug\eBar.Invoice.resources

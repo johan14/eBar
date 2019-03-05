@@ -256,7 +256,7 @@
             this.data.Location = new System.Drawing.Point(254, 70);
             this.data.Name = "data";
             this.data.ReadOnly = true;
-            this.data.Size = new System.Drawing.Size(100, 20);
+            this.data.Size = new System.Drawing.Size(128, 20);
             this.data.TabIndex = 29;
             // 
             // label24
