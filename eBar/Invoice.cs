@@ -120,5 +120,10 @@ namespace eBar
         {
 
         }
+
+        private void Invoice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

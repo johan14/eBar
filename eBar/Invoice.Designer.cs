@@ -342,6 +342,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Invoice";
             this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
